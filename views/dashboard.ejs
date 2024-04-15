@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .logout-btn {
+            text-align: center;
+        }
+        .logout-btn a {
+            color: #333;
+            text-decoration: none;
+        }
+        .logout-btn a:hover {
+            text-decoration: underline;
+        }
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Welcome to Your Dashboard, <%= user %>!</h1>
+        <div class="card">
+            <h2>Session ID - <%= id%></h2>
+        </div>
+        <div class="logout-btn">
+            <input type="button" value="logout" id="btn">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn").onclick = function() {
+            // Redirect to the desired route
+            window.location.href = "http://localhost:3000/logout";
+        };
+        </script>
+</body>
+</html>
